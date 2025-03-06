@@ -1,0 +1,188 @@
+/* Variables de colores */
+:root {
+    --celeste: #0094D1;
+    --blanco: #FFFFFF;
+    --gris-claro: #F4F4F4;
+    --gris-dedo: #E0E0E0;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+
+  font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87); 
+     background-color: #242424; 
+  
+    font-synthesis: none; 
+    text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased; 
+   -moz-osx-font-smoothing: grayscale;
+
+  }
+  
+  /* Contenedor principal */
+  .main-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Cabecera */
+  /* .header {
+    background-color: var(--celeste);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+  } */
+   /* Header Styles */
+/* Header Styles */
+/* Header Styles */
+/* Header Styles */
+.header {
+    background-image: url('https://media.istockphoto.com/id/887465766/es/foto/maquinaria-de-construcci%C3%B3n-de-la-carretera-en-la-construcci%C3%B3n-de-la-carretera.jpg?s=612x612&w=0&k=20&c=QaEHf4dsefYubrEASt5QDjQiwqeAAYQ0G5zDMoEcDV4='); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    filter: brightness(50%) blur(5px); /* Imagen con brillo y difuminada */
+    color: #fff; /* Texto blanco */
+    height: 800px; /* Altura mayor para un efecto más grande */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Ajusta los márgenes laterales si es necesario */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para dar un efecto de relieve */
+    margin-bottom: 40px; /* Separación con el contenido siguiente */
+    position: relative; /* Necesario para colocar el contenido encima de la imagen */
+    overflow: hidden; /* Asegura que nada sobresalga fuera del área del header */
+  }
+  
+  /* Estilo del título */
+  .header h1 {
+    font-size: 4rem; /* Título grande */
+    font-weight: 700; /* Negrita */
+    text-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7); /* Sombra fuerte para el texto */
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Asegura que el título esté por encima de la imagen */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animación para el desplazamiento y opacidad */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Desplazado hacia abajo inicialmente */
+  }
+  
+  /* Efecto cuando el h1 es visible */
+  .header h1.visible {
+    opacity: 1; /* Hace que el h1 sea completamente visible */
+    transform: translateY(0); /* Vuelve a su posición original */
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem; /* Reducir tamaño en pantallas pequeñas */
+    }
+  
+    .header {
+      height: 300px; /* Ajustar el tamaño del header en pantallas más pequeñas */
+    }
+  }
+  
+  
+  
+  /* Secciones */
+  .section {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--blanco);
+  }
+  
+  /* Estilos de título de cada sección */
+  .section h2 {
+    color: var(--celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Sección de sobre nosotros */
+  .about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  /* Sección de servicios */
+  .services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .services li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .services li::before {
+    content: '•';
+    color: var(--celeste);
+    margin-right: 10px;
+  }
+  
+
+  .projects {
+    background-color: var(--gris-claro);
+  }
+  
+  .projects p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  /* Estilos para el mapa */
+  .map-container {
+    width: 100%;
+    height: 400px;
+    background-color: var(--gris-dedo);
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Sección de contacto */
+  .contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .contact p:first-child {
+    margin-top: 0;
+  }
+  

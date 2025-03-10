@@ -5,7 +5,7 @@ import Menu from '../components/menu';
 const MainInfo: React.FC = () => {
   useEffect(() => {
     const header = document.querySelector('.header h1');
-    
+
     // Crear un observador de intersección
     const observer = new IntersectionObserver(
       (entries) => {
@@ -38,16 +38,18 @@ const MainInfo: React.FC = () => {
   }, []);
 
   return (
+
     <div className="main-container">
-      <Menu/>
+      <Menu />
       <header className="header">
+
         <h1>GAV Ingeniería</h1>
       </header>
 
       <section className="section about">
         <h2>Sobre Nosotros</h2>
         <p>
-          GAV Ingeniería es una empresa líder en construcción e infraestructura, 
+          GAV Ingeniería es una empresa líder en construcción e infraestructura,
           especializada en proyectos de alta calidad y tecnología de punta.
         </p>
       </section>
@@ -65,12 +67,12 @@ const MainInfo: React.FC = () => {
       <section className="section projects">
         <h2>Proyectos Destacados</h2>
         <p>Hemos desarrollado múltiples proyectos de gran impacto en el sector.</p>
-        
+
         <div className="map-container">
-          <iframe 
-            src="https://www.google.com/maps/d/embed?mid=1H2OzyR8wM2vntv62bRtnMBp4O9_q5zrs" 
-            width="100%" 
-            height="400" 
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1H2OzyR8wM2vntv62bRtnMBp4O9_q5zrs"
+            width="100%"
+            height="400"
             title="Mapa de Costa Rica - Proyectos">
           </iframe>
         </div>

@@ -12,6 +12,10 @@
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@react-google-maps/api": "^2.20.7",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.555.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.9.4",

@@ -1,0 +1,330 @@
+/* ==========================================================================================
+   ESTILOS BASE
+   ========================================================================================== */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+  max-width: 1400px;
+}
+
+/* ==========================================================================================
+   CARRUSEL RESPONSIVE
+   ========================================================================================== */
+
+.carousel-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+/* CAPTION RESPONSIVE */
+.carousel-caption {
+  width: 100%;
+  max-width: 900px;
+  margin: 8px auto 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  background: transparent;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Contenedor centrado */
+.carousel-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Indicador base */
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #0284c7;          /* borde elegante celeste */
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+
+  transition: 
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover */
+.indicador:hover {
+  transform: scale(1.25);
+  background: #070707;
+  box-shadow: 0 0 8px rgba(24, 25, 26, 0.4);
+}
+
+/* Indicador activo */
+.indicador.activo {
+  background: #0284c7; /* celeste GAVS */
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgba(18, 18, 19, 0.6);
+  border-color: rgb(5, 5, 5);
+}
+
+
+
+/* ==========================================================================================
+   NAVBAR
+   ========================================================================================== */
+
+.navbar {
+  width: 100%;
+  background: yellow;
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity .3s;
+}
+
+.navbar-links a:hover {
+  opacity: .7;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+
+/* ==========================================================================================
+   HERO
+   ========================================================================================== */
+
+.hero {
+  margin-top: 80px;
+  width: 100%;
+  background: rgba(0, 163, 255, 0.25);
+  color: black;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 0;
+  backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================================
+   SECCIONES
+   ========================================================================================== */
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: #0284c7;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================================
+   CARDS / GRID
+   ========================================================================================== */
+
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* ==========================================================================================
+   CONTACTO – ANCHO COMPLETO
+   ========================================================================================== */
+
+.contact {
+  background: #0284c7;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.contact button {
+  background: white;
+  color: #0284c7;
+  font-weight: bold;
+  padding: 0.9rem 2.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================================
+   FOOTER
+   ========================================================================================== */
+
+.footer {
+  background: #0f172a;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+
+
+/* =================================================================================================
+   ==========================  RESPONSIVE COMPLETO  ===============================================
+   ================================================================================================= */
+
+
+/* TABLETS (Max-width 992px) */
+@media (max-width: 992px) {
+  body {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .carousel-image,
+  .carousel-caption {
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+
+/* CELULARES GRANDES (Max-width 768px) */
+@media (max-width: 768px) {
+
+  /* Navegación móvil */
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: yellow;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Texto */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* CELULARES PEQUEÑOS (Max-width 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .carousel-caption {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+  }
+}

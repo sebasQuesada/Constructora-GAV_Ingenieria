@@ -48,3 +48,7 @@ export default tseslint.config({
   },
 })
 ```
+
+
+INSTALAR 
+npm install @react-google-maps/api

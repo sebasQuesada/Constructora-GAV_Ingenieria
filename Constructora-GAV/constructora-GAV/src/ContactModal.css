@@ -1,0 +1,97 @@
+/* Fondo oscuro del modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+/* Contenedor del modal */
+.modal-container {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+/* Animación al aparecer */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón cerrar */
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.4rem;
+  color: #666;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: black;
+}
+
+/* Título */
+.modal-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2563eb; /* azul */
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  padding: 0.55rem;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.modal-input:focus,
+.modal-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Botón enviar */
+.modal-submit-btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 0.65rem 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-submit-btn:hover {
+  background: #1d4ed8;
+}
